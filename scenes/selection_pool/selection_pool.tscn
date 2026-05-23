@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://dm6yywxnc7n8u"]
+
+[ext_resource type="Script" uid="uid://dawfieg4t5io1" path="res://scenes/selection_pool/selection_pool.gd" id="1_afxp4"]
+[ext_resource type="PackedScene" uid="uid://d145hrqsnguj5" path="res://scenes/lizard/lizard.tscn" id="1_ni4v7"]
+[ext_resource type="Texture2D" uid="uid://br0u6svb3nn57" path="res://assets/icon1.svg" id="2_afxp4"]
+[ext_resource type="Texture2D" uid="uid://ftuhknery50f" path="res://assets/icon2.svg" id="3_tast3"]
+[ext_resource type="Texture2D" uid="uid://cyig2vq3oxjn1" path="res://assets/icon3.svg" id="4_v8lea"]
+[ext_resource type="Texture2D" uid="uid://c6bvid383f16m" path="res://assets/icon4.svg" id="5_cjg1g"]
+[ext_resource type="Texture2D" uid="uid://bwpggh6bgxjto" path="res://assets/icon5.svg" id="6_hxmcx"]
+
+[node name="SelectionPool" type="Node2D" unique_id=1890066003]
+script = ExtResource("1_afxp4")
+
+[node name="LizardRock" parent="." unique_id=2102822212 instance=ExtResource("1_ni4v7")]
+position = Vector2(2, 0)
+sprite_texture = ExtResource("2_afxp4")
+
+[node name="LizardPaper" parent="." unique_id=2056597932 instance=ExtResource("1_ni4v7")]
+position = Vector2(200, 0)
+selection = 1
+sprite_texture = ExtResource("3_tast3")
+
+[node name="LizardScissors" parent="." unique_id=1322842566 instance=ExtResource("1_ni4v7")]
+position = Vector2(400, 0)
+selection = 2
+sprite_texture = ExtResource("4_v8lea")
+
+[node name="LizardSpock" parent="." unique_id=1396686104 instance=ExtResource("1_ni4v7")]
+position = Vector2(600, 0)
+selection = 3
+sprite_texture = ExtResource("5_cjg1g")
+
+[node name="LizardLizard" parent="." unique_id=973307745 instance=ExtResource("1_ni4v7")]
+position = Vector2(800, 0)
+selection = 4
+sprite_texture = ExtResource("6_hxmcx")

@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bj1p6y1de6mqi"]
+
+[ext_resource type="Script" uid="uid://be35x55hyeugb" path="res://scenes/draft/draft.gd" id="1_0coge"]
+[ext_resource type="PackedScene" uid="uid://dm6yywxnc7n8u" path="res://scenes/selection_pool/selection_pool.tscn" id="2_yslb6"]
+[ext_resource type="PackedScene" uid="uid://dltkeymkar5s0" path="res://scenes/selected_team/selected_team.tscn" id="3_yslb6"]
+
+[node name="Draft" type="Node2D" unique_id=257610272]
+script = ExtResource("1_0coge")
+
+[node name="SelectionPool" parent="." unique_id=1890066003 instance=ExtResource("2_yslb6")]
+position = Vector2(100, 550)
+
+[node name="SelectedTeam" parent="." unique_id=930318175 instance=ExtResource("3_yslb6")]
+position = Vector2(100, 250)
+
+[node name="AddButton" type="Button" parent="." unique_id=1057757624]
+offset_left = 925.0
+offset_top = 375.0
+offset_right = 1125.0
+offset_bottom = 452.0
+theme_override_font_sizes/font_size = 50
+text = "Add"
+
+[connection signal="pressed" from="AddButton" to="." method="_on_add_button_pressed"]
