@@ -24,3 +24,8 @@ func _lizard_selected_team(lizard) -> void:
 func _on_add_button_pressed() -> void:
 	if selected_lizard_pool and selected_lizard_team:
 		selected_lizard_team.set_lizard(selected_lizard_pool)
+
+func _on_continue_button_pressed() -> void:
+	if selected_team.is_valid_team():
+		Global.set_lizard_team(selected_team)
+		get_tree().change_scene_to_file("res://scenes/battle/battle.tscn")
