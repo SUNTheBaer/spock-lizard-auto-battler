@@ -13,23 +13,23 @@ height = 8
 [node name="SelectedTeam" type="Node2D" unique_id=930318175]
 script = ExtResource("1_rrncx")
 
-[node name="Position1" type="Node2D" parent="." unique_id=1979210108]
+[node name="Position5" type="Node2D" parent="." unique_id=1979210108]
 
-[node name="Pedestal" type="Sprite2D" parent="Position1" unique_id=183957982]
+[node name="Pedestal" type="Sprite2D" parent="Position5" unique_id=183957982]
 position = Vector2(0, 79)
 texture = SubResource("GradientTexture2D_rrncx")
 
-[node name="Lizard" parent="Position1" unique_id=2102822212 instance=ExtResource("1_hyn58")]
+[node name="Lizard" parent="Position5" unique_id=2102822212 instance=ExtResource("1_hyn58")]
 selection = 5
 
-[node name="Position2" type="Node2D" parent="." unique_id=1743924996]
+[node name="Position4" type="Node2D" parent="." unique_id=1743924996]
 position = Vector2(200, 0)
 
-[node name="Pedestal" type="Sprite2D" parent="Position2" unique_id=2071823048]
+[node name="Pedestal" type="Sprite2D" parent="Position4" unique_id=2071823048]
 position = Vector2(0, 79)
 texture = SubResource("GradientTexture2D_rrncx")
 
-[node name="Lizard" parent="Position2" unique_id=2101449398 instance=ExtResource("1_hyn58")]
+[node name="Lizard" parent="Position4" unique_id=2101449398 instance=ExtResource("1_hyn58")]
 selection = 5
 
 [node name="Position3" type="Node2D" parent="." unique_id=647808403]
@@ -42,23 +42,23 @@ texture = SubResource("GradientTexture2D_rrncx")
 [node name="Lizard" parent="Position3" unique_id=1238366685 instance=ExtResource("1_hyn58")]
 selection = 5
 
-[node name="Position4" type="Node2D" parent="." unique_id=1100630856]
+[node name="Position2" type="Node2D" parent="." unique_id=1100630856]
 position = Vector2(600, 0)
 
-[node name="Pedestal" type="Sprite2D" parent="Position4" unique_id=2015081837]
+[node name="Pedestal" type="Sprite2D" parent="Position2" unique_id=2015081837]
 position = Vector2(0, 79)
 texture = SubResource("GradientTexture2D_rrncx")
 
-[node name="Lizard" parent="Position4" unique_id=1131647249 instance=ExtResource("1_hyn58")]
+[node name="Lizard" parent="Position2" unique_id=1131647249 instance=ExtResource("1_hyn58")]
 selection = 5
 
-[node name="Position5" type="Node2D" parent="." unique_id=2103878724]
+[node name="Position1" type="Node2D" parent="." unique_id=2103878724]
 position = Vector2(800, 0)
 scale = Vector2(0.99575144, 1.0092534)
 
-[node name="Pedestal" type="Sprite2D" parent="Position5" unique_id=558462891]
+[node name="Pedestal" type="Sprite2D" parent="Position1" unique_id=558462891]
 position = Vector2(0, 79)
 texture = SubResource("GradientTexture2D_rrncx")
 
-[node name="Lizard" parent="Position5" unique_id=315930131 instance=ExtResource("1_hyn58")]
+[node name="Lizard" parent="Position1" unique_id=315930131 instance=ExtResource("1_hyn58")]
 selection = 5

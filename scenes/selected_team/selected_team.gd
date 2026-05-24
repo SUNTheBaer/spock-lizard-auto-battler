@@ -8,7 +8,16 @@ signal lizard_selected(lizard)
 @onready var position_four: Node2D = $Position4
 @onready var position_five: Node2D = $Position5
 
+const EMPTY_ENUM: int = 5 
+
 var selected_position: Node2D
+
+func is_valid_team() -> bool:
+	var all_positions = self.get_children()
+	for i in range(0, all_positions.size()):
+		if all_positions[i].get_child(-1).selection == EMPTY_ENUM:
+			return false
+	return true
 
 func _ready() -> void:
 	_connect_signals()
