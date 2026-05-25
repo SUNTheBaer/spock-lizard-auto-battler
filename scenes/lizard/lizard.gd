@@ -1,3 +1,4 @@
+class_name Lizard
 extends Node2D
 
 enum SELECTION { ROCK, PAPER, SCISSORS, LIZARD, SPOCK, EMPTY }

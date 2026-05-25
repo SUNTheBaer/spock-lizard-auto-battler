@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://cdx1ks8yru12u"]
+
+[ext_resource type="Script" uid="uid://dmlqnyexsdk7k" path="res://scenes/util/go_to_scene.gd" id="1_monoa"]
+
+[node name="WinnersPanel" type="PanelContainer" unique_id=2117725068]
+custom_minimum_size = Vector2(320, 180)
+metadata/_tab_index = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1369543305]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1389444493]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1962336088]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Your team has won!"
+horizontal_alignment = 1
+
+[node name="Buttons" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1384785959]
+layout_mode = 2
+
+[node name="TryAgain" type="Button" parent="MarginContainer/VBoxContainer/Buttons" unique_id=1438611288]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Go Again"
+
+[node name="SceneNavigation" type="Node" parent="MarginContainer/VBoxContainer/Buttons/TryAgain" unique_id=1209183604]
+script = ExtResource("1_monoa")
+scene = 3
+metadata/_custom_type_script = "uid://dmlqnyexsdk7k"
+
+[node name="Menu" type="Button" parent="MarginContainer/VBoxContainer/Buttons" unique_id=2068677971]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Main Menu"
+
+[node name="SceneNavigation" type="Node" parent="MarginContainer/VBoxContainer/Buttons/Menu" unique_id=450038346]
+script = ExtResource("1_monoa")
+scene = 1
+metadata/_custom_type_script = "uid://dmlqnyexsdk7k"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Buttons/TryAgain" to="MarginContainer/VBoxContainer/Buttons/TryAgain/SceneNavigation" method="trigger"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Buttons/Menu" to="MarginContainer/VBoxContainer/Buttons/Menu/SceneNavigation" method="trigger"]

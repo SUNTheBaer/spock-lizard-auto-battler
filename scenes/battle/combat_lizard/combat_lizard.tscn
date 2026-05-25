@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://pjev2mnebnih"]
+
+[ext_resource type="Script" uid="uid://skbpjehqepra" path="res://scenes/battle/combat_lizard/combat_lizard.gd" id="1_xsb4w"]
+[ext_resource type="Script" uid="uid://6xo2cd3k2705" path="res://scenes/info/info_instance.gd" id="2_vfoql"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ffvsa"]
+radius = 64.0
+
+[node name="Lizard" type="Node2D" unique_id=523505873]
+script = ExtResource("1_xsb4w")
+lizard_type = "paper"
+
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=63766853]
+
+[node name="InfoInstance" type="Node2D" parent="." unique_id=844649718]
+script = ExtResource("2_vfoql")
+metadata/_custom_type_script = "uid://6xo2cd3k2705"
+
+[node name="Area" type="Area2D" parent="InfoInstance" unique_id=1173152059]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InfoInstance/Area" unique_id=1088146541]
+shape = SubResource("CircleShape2D_ffvsa")
+debug_color = Color(0.3412765, 0.62150025, 5.7756904e-07, 0.41960785)

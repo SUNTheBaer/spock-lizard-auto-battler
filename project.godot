@@ -11,13 +11,19 @@ config_version=5
 [application]
 
 config/name="Spock Lizard Auto Battler"
-run/main_scene="uid://bj1p6y1de6mqi"
+run/main_scene="uid://mvpvcel6yscs"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://assets/icon1.svg"
+config/icon="res://assets/sprites/icon1.svg"
 
 [autoload]
 
 Global="*uid://bugfkqhkj6lsq"
+SceneManager="*uid://bd0ejgdh5b2c"
+
+[display]
+
+window/size/viewport_width=1366
+window/size/viewport_height=768
 
 [input]
 
