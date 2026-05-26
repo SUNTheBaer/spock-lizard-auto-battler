@@ -28,4 +28,5 @@ func _on_add_button_pressed() -> void:
 func _on_continue_button_pressed() -> void:
 	if selected_team.is_valid_team():
 		Global.set_lizard_team(selected_team)
-		get_tree().change_scene_to_file("res://scenes/battle/battle.tscn")
+		Global.opponent_team = Global.random_team()
+		SceneManager.go_to_scene(SceneManager.Scene.BATTLE)

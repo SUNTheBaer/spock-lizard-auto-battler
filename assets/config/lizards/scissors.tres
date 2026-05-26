@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="LizardConfig" format=3 uid="uid://cdwrppblgmb4o"]
+
+[ext_resource type="Script" uid="uid://syswqqcjdokf" path="res://assets/config/scripts/lizard_config.gd" id="1_hpnrt"]
+[ext_resource type="SpriteFrames" uid="uid://b0el1fkkordyu" path="res://assets/animation/frames/scissors_animation.tres" id="2_6ttud"]
+
+[resource]
+script = ExtResource("1_hpnrt")
+display_name = "Emo Lizard"
+description = "This lizard knows how to dress"
+visuals = ExtResource("2_6ttud")
+wins_against = Dictionary[String, String]({
+"lizard": "cuts",
+"paper": "cuts"
+})
+metadata/_custom_type_script = "uid://syswqqcjdokf"

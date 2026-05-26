@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cdqc4ywpk6q8l"]
+
+[ext_resource type="Script" uid="uid://b1yn1lgfadxh2" path="res://scenes/battle/lizard_team/lizard_team.gd" id="1_sonun"]
+[ext_resource type="PackedScene" uid="uid://pjev2mnebnih" path="res://scenes/battle/combat_lizard/combat_lizard.tscn" id="2_4xa11"]
+[ext_resource type="PackedScene" uid="uid://drqdp3eoaxlg4" path="res://scenes/battle/ragdoll_lizard/ragdoll_lizard.tscn" id="3_qwkoo"]
+
+[node name="MyTeam" type="Node2D" unique_id=1134197759]
+script = ExtResource("1_sonun")
+lizard_scene = ExtResource("2_4xa11")
+ragdoll_scene = ExtResource("3_qwkoo")
+position_separator = -134.0

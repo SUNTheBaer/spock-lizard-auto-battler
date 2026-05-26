@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="GlobalConfig" format=3 uid="uid://f2fxx1c8ipd2"]
+
+[ext_resource type="Script" uid="uid://cnmpk7faob21e" path="res://assets/config/scripts/config_resource.gd" id="1_46kvq"]
+[ext_resource type="Curve" uid="uid://cfxm4jtn0kem0" path="res://assets/animation/curves/spawn_alpha_curve.tres" id="1_irpki"]
+[ext_resource type="Curve" uid="uid://bxeg1754xgajy" path="res://assets/animation/curves/bounce.tres" id="1_jq5sf"]
+[ext_resource type="Curve" uid="uid://u10d5ljussmj" path="res://assets/animation/curves/spawn_position_curve.tres" id="2_jq5sf"]
+[ext_resource type="Resource" uid="uid://c4ed2ru1jjh4v" path="res://assets/config/lizards/paper.tres" id="2_sypij"]
+[ext_resource type="Script" uid="uid://syswqqcjdokf" path="res://assets/config/scripts/lizard_config.gd" id="2_yvtir"]
+[ext_resource type="Resource" uid="uid://cdwrppblgmb4o" path="res://assets/config/lizards/scissors.tres" id="3_yvtir"]
+[ext_resource type="Resource" uid="uid://j2jrdnyqgqtf" path="res://assets/config/lizards/rock.tres" id="4_46kvq"]
+[ext_resource type="Resource" uid="uid://c0j0pk0p3yvbn" path="res://assets/config/lizards/spock.tres" id="5_sypij"]
+[ext_resource type="Resource" uid="uid://j8m76u6qc3vo" path="res://assets/config/lizards/lizard.tres" id="6_yvtir"]
+
+[resource]
+script = ExtResource("1_46kvq")
+sprite_data = Dictionary[String, ExtResource("2_yvtir")]({
+"lizard": ExtResource("6_yvtir"),
+"paper": ExtResource("2_sypij"),
+"rock": ExtResource("4_46kvq"),
+"scissors": ExtResource("3_yvtir"),
+"spock": ExtResource("5_sypij")
+})
+init_position_curve = ExtResource("2_jq5sf")
+init_alpha_curve = ExtResource("1_irpki")
+bounce_curve = ExtResource("1_jq5sf")
+metadata/_custom_type_script = "uid://cnmpk7faob21e"

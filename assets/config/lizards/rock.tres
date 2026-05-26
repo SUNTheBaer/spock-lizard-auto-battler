@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="LizardConfig" format=3 uid="uid://j2jrdnyqgqtf"]
+
+[ext_resource type="Script" uid="uid://syswqqcjdokf" path="res://assets/config/scripts/lizard_config.gd" id="1_y7128"]
+[ext_resource type="SpriteFrames" uid="uid://b64t5tx4tgx7q" path="res://assets/animation/frames/rock_animation.tres" id="2_d6m4q"]
+
+[resource]
+script = ExtResource("1_y7128")
+display_name = "Rockstar Lizard"
+description = "A lizard that's ready to ROCK"
+visuals = ExtResource("2_d6m4q")
+wins_against = Dictionary[String, String]({
+"lizard": "crushes",
+"scissors": "crushes"
+})
+metadata/_custom_type_script = "uid://syswqqcjdokf"

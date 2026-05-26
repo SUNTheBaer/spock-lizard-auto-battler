@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://c613k7a1h2gqc"]
+
+[ext_resource type="Script" uid="uid://ix3lqgnpck0f" path="res://scenes/info/info_display.gd" id="1_2pw6v"]
+
+[node name="InfoDisplay" type="HBoxContainer" unique_id=1057799152 node_paths=PackedStringArray("title_label", "description_label")]
+custom_minimum_size = Vector2(280, 0)
+offset_right = 256.0
+offset_bottom = 77.0
+mouse_filter = 2
+script = ExtResource("1_2pw6v")
+title_label = NodePath("PanelContainer/MarginContainer/VBoxContainer/Label")
+description_label = NodePath("PanelContainer/MarginContainer/VBoxContainer/RichTextLabel")
+
+[node name="Control" type="Control" parent="." unique_id=1822422787]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=713040544]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=170470118]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1773183278]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=164405548]
+layout_mode = 2
+text = "Title"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1993208651]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 12
+theme_override_font_sizes/bold_font_size = 12
+theme_override_font_sizes/bold_italics_font_size = 12
+theme_override_font_sizes/italics_font_size = 12
+theme_override_font_sizes/mono_font_size = 12
+bbcode_enabled = true
+text = "The quick brown brown fox jumped over the lazy dog"
+fit_content = true
+scroll_active = false

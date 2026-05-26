@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="LizardConfig" format=3 uid="uid://j8m76u6qc3vo"]
+
+[ext_resource type="Script" uid="uid://syswqqcjdokf" path="res://assets/config/scripts/lizard_config.gd" id="1_p6xei"]
+[ext_resource type="SpriteFrames" uid="uid://ciuvgfv5bqdbr" path="res://assets/animation/frames/lizard_animation.tres" id="2_0323x"]
+
+[resource]
+script = ExtResource("1_p6xei")
+display_name = "Lizard Lizard"
+description = "A normal lizard"
+visuals = ExtResource("2_0323x")
+wins_against = Dictionary[String, String]({
+"paper": "eats",
+"spock": "poisons"
+})
+metadata/_custom_type_script = "uid://syswqqcjdokf"

@@ -1,3 +1,81 @@
 [gd_scene format=3 uid="uid://1k2mg63ohv73"]
 
+[ext_resource type="Script" uid="uid://cmqlua5tuj0yf" path="res://scenes/battle/battle_composer.gd" id="1_0yh6x"]
+[ext_resource type="PackedScene" uid="uid://c613k7a1h2gqc" path="res://scenes/info/info_display.tscn" id="1_7gynk"]
+[ext_resource type="PackedScene" uid="uid://cdqc4ywpk6q8l" path="res://scenes/battle/lizard_team/my_team.tscn" id="1_ffvsa"]
+[ext_resource type="PackedScene" uid="uid://buxxblgbkgblj" path="res://scenes/battle/lizard_team/opponent_team.tscn" id="2_xd4uy"]
+[ext_resource type="Script" uid="uid://ca0f7vvqfa8jw" path="res://scenes/util/writer_label.gd" id="4_h0kxc"]
+[ext_resource type="Script" uid="uid://caeup53lal7if" path="res://scenes/battle/ui_composer.gd" id="4_pll4o"]
+[ext_resource type="PackedScene" uid="uid://cdx1ks8yru12u" path="res://scenes/battle/winners_panel.tscn" id="5_py4tk"]
+[ext_resource type="PackedScene" uid="uid://bd7xsrpr4wmci" path="res://scenes/battle/losers_panel.tscn" id="6_agsc7"]
+
 [node name="Battle" type="Node2D" unique_id=796013531]
+
+[node name="BattleComposer" type="Node2D" parent="." unique_id=202884877 node_paths=PackedStringArray("my_team", "opponent_team")]
+script = ExtResource("1_0yh6x")
+battle_delay = 0.15
+my_team = NodePath("../MyTeam")
+opponent_team = NodePath("../OpponentTeam")
+metadata/_custom_type_script = "uid://cmqlua5tuj0yf"
+
+[node name="MyTeam" parent="." unique_id=1134197759 instance=ExtResource("1_ffvsa")]
+position = Vector2(-96, 0)
+
+[node name="OpponentTeam" parent="." unique_id=1615191317 instance=ExtResource("2_xd4uy")]
+position = Vector2(96, 0)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=21561589]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=927477059]
+
+[node name="UIComposer" type="Node" parent="CanvasLayer" unique_id=857319401 node_paths=PackedStringArray("info_screen")]
+script = ExtResource("4_pll4o")
+info_screen = NodePath("../UI/CenterContainer")
+win_scene = ExtResource("5_py4tk")
+lose_scene = ExtResource("6_agsc7")
+metadata/_custom_type_script = "uid://caeup53lal7if"
+
+[node name="UI" type="Control" parent="CanvasLayer" unique_id=716340691]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/UI" unique_id=1367681281]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="BattleProgress" type="VBoxContainer" parent="CanvasLayer/UI/CenterContainer" unique_id=572795780]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="BattleProgress" type="Label" parent="CanvasLayer/UI/CenterContainer/BattleProgress" unique_id=288693168]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 24
+text = "TEST TEST TEST"
+vertical_alignment = 2
+script = ExtResource("4_h0kxc")
+write_speed = 256.0
+delete_speed = 1024.0
+
+[node name="Control" type="Control" parent="CanvasLayer/UI/CenterContainer/BattleProgress" unique_id=1277903861]
+custom_minimum_size = Vector2(0, 160)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="InfoDisplay" parent="CanvasLayer" unique_id=1990645762 instance=ExtResource("1_7gynk")]
+visible = false
+
+[connection signal="my_team_wins" from="BattleComposer" to="CanvasLayer/UIComposer" method="my_team_wins"]
+[connection signal="opponent_team_wins" from="BattleComposer" to="CanvasLayer/UIComposer" method="my_team_loses"]
+[connection signal="round_complete" from="BattleComposer" to="CanvasLayer/UI/CenterContainer/BattleProgress/BattleProgress" method="_set_target_text"]
+[connection signal="tie" from="BattleComposer" to="CanvasLayer/UIComposer" method="my_team_loses"]

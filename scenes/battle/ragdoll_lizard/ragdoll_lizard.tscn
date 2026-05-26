@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://drqdp3eoaxlg4"]
+
+[ext_resource type="Script" uid="uid://bby5shr016qyv" path="res://scenes/battle/ragdoll_lizard/ragdoll_lizard.gd" id="1_leedc"]
+
+[node name="RagdollLizard" type="Node2D" unique_id=3864926]
+script = ExtResource("1_leedc")
+metadata/_custom_type_script = "uid://bby5shr016qyv"
+
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=405405775]
