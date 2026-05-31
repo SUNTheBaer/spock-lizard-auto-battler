@@ -54,5 +54,38 @@ func configure(config: GlobalConfig) -> void:
 func set_lizard_team(selected_team_node: Node2D) -> void:
 	var all_positions = selected_team_node.get_children()
 	for i in range(0, all_positions.size()) :
-		print(all_positions[i].get_child(-1).selection)
-		my_team[i] = LIZARD_TYPE_MAP.get(all_positions[i].get_child(-1).selection, "paper")
+		my_team[i] = LIZARD_TYPE_MAP.get(all_positions[i].get_node("Lizard").selection, "paper")
+
+
+func generate_hints() -> PackedStringArray:
+	var result: PackedStringArray
+	var checked: Array
+	result.resize(my_team.size())
+	checked.resize(my_team.size())
+	
+	# Initially assigning red or green based on matchup
+	for i in my_team.size():
+		var mine := config_resource.sprite_data.get(my_team[i]) as LizardConfig
+		var theirs := config_resource.sprite_data.get(opponent_team[i]) as LizardConfig
+		if mine.beats(opponent_team[i]):
+			result.set(i, "green")
+			checked.set(i, true)
+		elif theirs.beats(my_team[i]):
+			result.set(i, "red")
+		else:
+			result.set(i, "blue")
+			checked.set(i, true)
+	
+	# Going through red results and checking if my team in that slot can beat opp team
+	# in any other slot
+	for i in result.size():
+		if result[i] == "red":
+			var mine := config_resource.sprite_data.get(my_team[i]) as LizardConfig
+			for j in result.size():
+				if j != i and not checked[j]:
+					var theirs := config_resource.sprite_data.get(opponent_team[j]) as LizardConfig
+					if mine.beats(opponent_team[j]):
+						result.set(i, "yellow")
+	
+	return result
+	
