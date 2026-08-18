@@ -6,10 +6,10 @@
 [resource]
 script = ExtResource("1_cjgok")
 display_name = "Paper Lizard"
-description = "A lizard made of paper"
+description = "Dad couldn't find a fifth lizard, so he made one himself!"
 visuals = ExtResource("2_18t1x")
 wins_against = Dictionary[String, String]({
 "rock": "covers",
-"spock": "disproves"
+"spock": "copyright strikes"
 })
 metadata/_custom_type_script = "uid://syswqqcjdokf"

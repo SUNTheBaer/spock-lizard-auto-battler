@@ -6,10 +6,10 @@
 [resource]
 script = ExtResource("1_hpnrt")
 display_name = "Emo Lizard"
-description = "This lizard knows how to dress"
+description = "An emo whose personality is just as sharp(and dangerous) as the scissor that he's holding."
 visuals = ExtResource("2_6ttud")
 wins_against = Dictionary[String, String]({
-"lizard": "cuts",
+"lizard": "bullies",
 "paper": "cuts"
 })
 metadata/_custom_type_script = "uid://syswqqcjdokf"

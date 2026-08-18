@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_p6xei")
 display_name = "Lizard Lizard"
-description = "A normal lizard"
+description = "A normal lizard."
 visuals = ExtResource("2_0323x")
 wins_against = Dictionary[String, String]({
 "paper": "eats",

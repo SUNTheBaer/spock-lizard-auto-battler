@@ -6,10 +6,10 @@
 [resource]
 script = ExtResource("1_y7128")
 display_name = "Rockstar Lizard"
-description = "A lizard that's ready to ROCK"
+description = "A punk who's ready to rock your game!"
 visuals = ExtResource("2_d6m4q")
 wins_against = Dictionary[String, String]({
-"lizard": "crushes",
-"scissors": "crushes"
+"lizard": "knocks out",
+"scissors": "ragebaits"
 })
 metadata/_custom_type_script = "uid://syswqqcjdokf"
